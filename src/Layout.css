@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@1,700&display=swap");
+/*----------
+Layout
+---------------*/
+.container {
+  background-color: #b2b9b1;
+  min-height: 100vh;
+}
+
+.card-color {
+  background-color: #e6e6e6;
+}
+.navbar {
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 2px solid #002b7f;
+  padding: 20px;
+}
+h2 {
+  font-family: "PT Serif", serif;
+  color: #002b7f;
+  padding: 2px;
+}
+
+/*-------------
+Card
+----------------*/
+.card {
+  min-height: 350px;
+}
+.card-body {
+}
+.search-box {
+  border-radius: 5%;
+  background-color: #eeebd7;
+}
