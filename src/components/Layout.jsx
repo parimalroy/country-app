@@ -47,7 +47,7 @@ const Layout = (props) => {
       <div className="container">
         <nav className="navbar">
           <h2>
-            <i class="fas fa-globe"></i> Country Information
+            <i className="fas fa-globe"></i> Country Information
           </h2>
           <form onSubmit={handleSubmit}>
             <input

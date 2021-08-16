@@ -4,6 +4,7 @@ import ".././Layout.css";
 const Card = (item) => {
   const [isModalOpen, setModalOpen] = useState(false);
   //console.log(item=item.capital)
+  Modal.setAppElement("#root");
   return (
     <>
       <div className="col-lg-3 col-md-4 col-sm-12 col-12 m-1 card-color">
@@ -26,7 +27,20 @@ const Card = (item) => {
             <a className="btn btn-sm">See More</a>
           </div>
         </div>
-        <Modal isOpen={isModalOpen}>
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => {
+            setModalOpen(false);
+          }}
+          style={{
+            overlay: {
+              background: "#E7E0C9",
+            },
+            content: {
+              background: "#C1CFC0",
+            },
+          }}
+        >
           <div className="text-center">
             <img
               className="card-img-top w-25"
@@ -34,7 +48,7 @@ const Card = (item) => {
               alt="Card image cap"
             />
 
-            <table className="table table-bordered mt-5">
+            <table className="table table-bordered table-hover mt-5">
               {/* <thead>
                                 <tr>
                                 <th scope="col">First</th>
@@ -43,46 +57,46 @@ const Card = (item) => {
                             </thead> */}
               <tbody>
                 <tr>
-                  <td>Country</td>
-                  <td>{item.Name}</td>
+                  <td scope="col">Country</td>
+                  <td scope="col">{item.Name}</td>
                 </tr>
                 <tr>
-                  <td>Capital</td>
-                  <td>{item.Capital}</td>
+                  <td scope="col">Capital</td>
+                  <td scope="col">{item.Capital}</td>
                 </tr>
                 <tr>
-                  <td>Region/Subregion</td>
-                  <td>
+                  <td scope="col">Region/Subregion</td>
+                  <td scope="col">
                     {item.Region}/{item.Subregion}
                   </td>
                 </tr>
                 <tr>
-                  <td>Population</td>
-                  <td>{item.Population}</td>
+                  <td scope="col">Population</td>
+                  <td scope="col">{item.Population}</td>
                 </tr>
                 <tr>
-                  <td>Calling Codes</td>
-                  <td>"+{item.CallingCodes}"</td>
+                  <td scope="col">Calling Codes</td>
+                  <td scope="col">"+{item.CallingCodes}"</td>
                 </tr>
                 <tr>
-                  <td>Top Level Domain</td>
-                  <td>{item.TopLevelDomain}</td>
+                  <td scope="col">Top Level Domain</td>
+                  <td scope="col">{item.TopLevelDomain}</td>
                 </tr>
                 <tr>
-                  <td>Time zones</td>
-                  <td>{item.Timezones}</td>
+                  <td scope="col">Time zones</td>
+                  <td scope="col">{item.Timezones}</td>
                 </tr>
                 <tr>
-                  <td>Currencies</td>
-                  <td>{`${item.Currencies} ,`}</td>
+                  <td scope="col">Currencies</td>
+                  <td scope="col">{`${item.Currencies} ,`}</td>
                 </tr>
                 <tr>
-                  <td>Languages</td>
-                  <td>{item.Languages}</td>
+                  <td scope="col">Languages</td>
+                  <td scope="col">{item.Languages}</td>
                 </tr>
                 <tr>
-                  <td>Borders</td>
-                  <td>{`${item.Borders} ,`}</td>
+                  <td scope="col">Borders</td>
+                  <td scope="col">{`${item.Borders} ,`}</td>
                 </tr>
               </tbody>
             </table>
